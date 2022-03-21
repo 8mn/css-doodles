@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CSS doodle</title>
+	</head>
+	<body>
+		<css-doodle>
+			:doodle{ 
+                @grid: 8 / 20rem 20rem; 
+                max-width: 90%;
+                grid-gap: 1px;
+                @shape: heart
+            } 
+            <!-- @shape: hexagon; -->
+            background: #fc205e;
+            
+		</css-doodle>
+
+		<script src="https://unpkg.com/css-doodle@0.26.3/css-doodle.min.js"></script>
+	</body>
+</html>

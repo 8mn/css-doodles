@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CSS doodle</title>
+	</head>
+	<body>
+		<css-doodle>
+			:doodle{ 
+                @grid: 8 / 20rem 20rem; 
+                @shape: circle;
+                background: #1a1d24;
+                max-width: 90%;
+            }  
+            @keyframes turn{
+                0%{
+                    transform: rotate(0deg);
+                }
+                100%{
+                    transform: rotate(360deg);
+                }
+            }
+
+            @keyframes glow{
+                50%{
+                    transform: scale(1.1);
+                }
+                100%{
+                    transform: scale(1);
+                }
+            }
+
+            @random{
+                animation: glow .9s ease-out infinite;
+            }
+
+            :hover{
+                animation: turn .9s ease-out infinite;
+            }
+
+
+            @shape: @pick('triangle', 'clover 4', 'hexagon', 'diamond', 'heart');
+            background: @pick('coral','orange','pink','blueviolet','darkslateblue');
+            margin: .5rem;
+            opacity: calc(@rand(1,10) / 10)
+		</css-doodle>
+
+		<script src="https://unpkg.com/css-doodle@0.26.3/css-doodle.min.js"></script>
+	</body>
+</html>

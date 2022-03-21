@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pattern</title>
+</head>
+<style>
+    /* body{
+        background-color: rgb(24, 25, 26);
+    } */
+    .grid{
+        position: fixed;
+        z-index: -1;
+    }
+</style>
+<body>
+    <css-doodle  class="grid">
+        :doodle{
+            @grid: 50 / 60rem;
+            grid-gap: 1px;
+        }
+        @shape: circle;
+        
+        transform: scale(@r(.1, 1.5)) translate3d(@r(50px), @r(100px), 10px) scale(3);
+        background: hsla(@r(220), 95%, @r(40%, 90%), @r(.5));
+        <!-- border: 1px solid hsla(@r(360), 85%, @r(40%, 90%), @r(.5)) -->
+    </css-doodle>
+
+    <script src="https://unpkg.com/css-doodle@0.26.3/css-doodle.min.js"></script>
+</body>
+</html>
